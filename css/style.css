@@ -1,0 +1,19 @@
+:root {
+  --font: 'Spartan', sans-serif;
+  --very-dark-magenta: #502050;
+  --soft-pink: #ee68a4;
+  --dark-magenta: #937b92;
+  --light--magenta: #f7f2f7;
+  --white: #ffffff;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font);
+}
+/*# sourceMappingURL=style.css.map */
