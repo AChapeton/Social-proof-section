@@ -66,12 +66,19 @@ html {
   &-card {
     border-radius: 8px;
     background-color: var(--very-dark-magenta);
-    padding: 35px 30px;
+    padding: 40px 32px 34px 32px;
     margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 246px;
 
     &-header {
       display: flex;
-      margin-bottom: 30px;
+      margin-bottom: 16px;
+      // border: 1px solid white;
+      align-items: center;
+      height: 42px;
     }
 
     &-img {
@@ -80,10 +87,36 @@ html {
       border-radius: 50%;
       overflow: hidden;
       margin-right: 16px;
+      // border: 1px solid yellow;
 
       & img {
         width: 100%;
       }
+    }
+
+    &-data {
+      // border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 42px;
+      font-size: 1.2rem;
+      & p {
+        font-weight: 600;
+        margin: 0;
+      }
+
+      & span {
+        color: var(--dark-magenta);
+        margin: 0;
+      }
+    }
+
+    &-desc {
+      font-size: 1.22rem;
+      line-height: 2rem;
+      margin: 0;
     }
   }
 }
