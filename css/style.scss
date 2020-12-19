@@ -16,6 +16,14 @@ html {
   font-family: var(--font);
 }
 
+body {
+  background-color: var(--dark-cyan);
+  background-image: url(../images/bg-pattern-top-mobile.svg),
+    url(../images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: left 0 top 0, right 0 botto 0;
+}
+
 .wrapper {
   padding: 0 24px;
 }
@@ -118,5 +126,90 @@ html {
       line-height: 2rem;
       margin: 0;
     }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    background-color: var(--dark-cyan);
+    background-image: url(../images/bg-pattern-top-desktop.svg),
+      url(../images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left 0 top 0, right 0 botto 0;
+  }
+
+  .wrapper {
+    padding: 0 89px;
+    margin: auto 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      'intro reviews'
+      'testimonials testimonials';
+  }
+
+  .intro {
+    grid-area: intro;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 175px;
+
+    & h1 {
+      text-align: left;
+      font-size: 5rem;
+      line-height: 48px;
+      margin-bottom: -16px;
+    }
+
+    & h2 {
+      text-align: left;
+      font-size: 1.5rem;
+    }
+  }
+
+  .review {
+    grid-area: reviews;
+    margin: 0;
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    &-card {
+      width: 445px;
+      height: 56px;
+    }
+  }
+
+  .review1 {
+    margin-right: 96px;
+  }
+
+  .review2 {
+    margin-right: 48px;
+  }
+
+  .testimonial {
+    grid-area: testimonials;
+    display: flex;
+    justify-content: space-between;
+
+    &-card {
+      width: 348px;
+      height: 233px;
+    }
+  }
+
+  .margin1 {
+    margin-top: 16px;
+  }
+
+  .margin2 {
+    margin-top: 32px;
   }
 }
